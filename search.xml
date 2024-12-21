@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>【wallpaper教程】web壁纸制作</title>
+      <link href="//post/2024/12/21/%E3%80%90wallpaper%E6%95%99%E7%A8%8B%E3%80%91web%E5%A3%81%E7%BA%B8%E5%88%B6%E4%BD%9C/"/>
+      <url>//post/2024/12/21/%E3%80%90wallpaper%E6%95%99%E7%A8%8B%E3%80%91web%E5%A3%81%E7%BA%B8%E5%88%B6%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>偶然间竟然发现wallpaper竟然支持网页制作壁纸，当时正苦恼官方的SceneScript没有可以参考的技术文档，就想着可不可以用JavaScript开发。然后就在创意工坊找到”网页“壁纸分类，嘿~这不巧了吗，专业对口啊。</p><p>但是官方并没有过多的讲述网页壁纸开发过程中需要注意的，以及一些其他配置相关的信息。因此，本教程将从初始化项目到运行项目来教授wallpaper-web壁纸制作。</p><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><blockquote><p>其实网页壁纸制作起来很简单，只是一个静态页面就可以了，注意，是一个</p></blockquote><h2 id="技术要求"><a href="#技术要求" class="headerlink" title="技术要求"></a>技术要求</h2><p>掌握Html容器的使用、熟练CSS样式制作（包括动画）、熟练JS脚本制作（动态壁纸）</p><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><h3 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h3><blockquote><p>基本的网页结构即可，各个文件夹和文件的位置对于项目根目录来说没有硬性要求，但为了良好的编程习惯，建议将对应的文件和文件夹整理成合理的结构</p></blockquote><img src="/post/2024/12/21/%E3%80%90wallpaper%E6%95%99%E7%A8%8B%E3%80%91web%E5%A3%81%E7%BA%B8%E5%88%B6%E4%BD%9C/2024-12-21-09-25-46-image.png" class=""><p>–项目根目录</p><p>    –css 储存网页的样式文件</p><p>    –font 字体文件夹</p><p>    – images 存放页面图片</p><p>    –js js脚本储存位置</p><p>    –index.html 壁纸视图（网页首页）</p><h3 id="wallpaper（壁纸制作完毕后出现的文件）"><a href="#wallpaper（壁纸制作完毕后出现的文件）" class="headerlink" title="wallpaper（壁纸制作完毕后出现的文件）"></a>wallpaper（壁纸制作完毕后出现的文件）</h3><img src="/post/2024/12/21/%E3%80%90wallpaper%E6%95%99%E7%A8%8B%E3%80%91web%E5%A3%81%E7%BA%B8%E5%88%B6%E4%BD%9C/2024-12-21-09-30-21-image.png" class=""><p>–项目根目录</p><p>    –css 储存网页的样式文件</p><p>    –font 字体文件夹</p><p>    – images 存放页面图片</p><p>    –js js脚本储存位置</p><p>    –index.html 壁纸视图（网页首页）</p><p>    –preview.jpg 壁纸缩略图</p><p>    –project.json 壁纸配置文件&#x2F;wallpaper可供用户更改壁纸数据的入口文件</p><h2 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h2><blockquote><p>因为网页壁纸本身就是网页，所以可以在浏览器中制作完毕后直接扔到wallpaper中运行即可，但是为了开发过程中便于调用wallpaper的一些属性和配置，建议使用”热更新方式“进行制作</p></blockquote><h3 id="导入项目"><a href="#导入项目" class="headerlink" title="导入项目"></a>导入项目</h3><p>将项目根目录的index.html拖入wallpaper编辑器新建项目小窗即可，wallpaper将自动导入inedx.html同级目录的所有文件</p><img src="/post/2024/12/21/%E3%80%90wallpaper%E6%95%99%E7%A8%8B%E3%80%91web%E5%A3%81%E7%BA%B8%E5%88%B6%E4%BD%9C/2024-12-21-10-55-57-image.png" class=""><img src="/post/2024/12/21/%E3%80%90wallpaper%E6%95%99%E7%A8%8B%E3%80%91web%E5%A3%81%E7%BA%B8%E5%88%B6%E4%BD%9C/2024-12-21-11-16-14-image.png" class=""><h3 id="常规开发方式"><a href="#常规开发方式" class="headerlink" title="常规开发方式"></a>常规开发方式</h3><p>项目在浏览器制作完毕后可以直接导入wallpaper中，然后运行</p><h3 id="热更新开发"><a href="#热更新开发" class="headerlink" title="热更新开发"></a>热更新开发</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> wallpaper教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wallpaper </tag>
+            
+            <tag> web </tag>
+            
+            <tag> html </tag>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《真-安全键盘》---灵感来自于河北农信的密码输入键盘</title>
       <link href="//post/2024/12/10/%E3%80%8A%E7%9C%9F-%E5%AE%89%E5%85%A8%E9%94%AE%E7%9B%98%E3%80%8B-%E7%81%B5%E6%84%9F%E6%9D%A5%E8%87%AA%E4%BA%8E%E6%B2%B3%E5%8C%97%E5%86%9C%E4%BF%A1%E7%9A%84%E5%AF%86%E7%A0%81%E8%BE%93%E5%85%A5%E9%94%AE%E7%9B%98/"/>
       <url>//post/2024/12/10/%E3%80%8A%E7%9C%9F-%E5%AE%89%E5%85%A8%E9%94%AE%E7%9B%98%E3%80%8B-%E7%81%B5%E6%84%9F%E6%9D%A5%E8%87%AA%E4%BA%8E%E6%B2%B3%E5%8C%97%E5%86%9C%E4%BF%A1%E7%9A%84%E5%AF%86%E7%A0%81%E8%BE%93%E5%85%A5%E9%94%AE%E7%9B%98/</url>
