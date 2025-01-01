@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>PHP-Laravel框架win环境部署与问题解决 | 深远</title><meta name="author" content="Shen Yuan"><meta name="copyright" content="Shen Yuan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言laravel 框架-nginx 真的好折磨人啊~ 最开始接触是在 24 年暑假的一个比赛，当时大意了，因为我本机平时都是使用 Apache 运行 PHP 项目，指定运行目录就能运行项目。但是到了那里比赛，人家只有 nginx 的 linux 服务器环境，虽说也是直接扔进相关目录，然后配置一下 nginx 就行，但是我没有用过 nginx 啊~~~ 而且从来没有在本机上用过 nginx，只知道">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP-Laravel框架win环境部署与问题解决">
+<meta property="og:url" content="https://shenyuanol.github.io/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.html">
+<meta property="og:site_name" content="深远">
+<meta property="og:description" content="前言laravel 框架-nginx 真的好折磨人啊~ 最开始接触是在 24 年暑假的一个比赛，当时大意了，因为我本机平时都是使用 Apache 运行 PHP 项目，指定运行目录就能运行项目。但是到了那里比赛，人家只有 nginx 的 linux 服务器环境，虽说也是直接扔进相关目录，然后配置一下 nginx 就行，但是我没有用过 nginx 啊~~~ 而且从来没有在本机上用过 nginx，只知道">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://shenyuanol.github.io/images/shenyuan.png">
+<meta property="article:published_time" content="2025-01-01T06:06:29.000Z">
+<meta property="article:modified_time" content="2025-01-01T07:43:21.282Z">
+<meta property="article:author" content="Shen Yuan">
+<meta property="article:tag" content="php">
+<meta property="article:tag" content="laravel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shenyuanol.github.io/images/shenyuan.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://shenyuanol.github.io/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PHP-Laravel框架win环境部署与问题解决',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(images/home.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/shenyuan.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 档案</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">深远</span></a><a class="nav-page-title" href="/"><span class="site-name">PHP-Laravel框架win环境部署与问题解决</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 档案</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">PHP-Laravel框架win环境部署与问题解决</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-01T06:06:29.000Z" title="发表于 2025-01-01 14:06:29">2025-01-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-01T07:43:21.282Z" title="更新于 2025-01-01 15:43:21">2025-01-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Laravel/">Laravel</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>laravel 框架-nginx 真的好折磨人啊~</p>
+<p>最开始接触是在 24 年暑假的一个比赛，当时大意了，因为我本机平时都是使用 Apache 运行 PHP 项目，指定运行目录就能运行项目。但是到了那里比赛，人家只有 nginx 的 linux 服务器环境，虽说也是直接扔进相关目录，然后配置一下 nginx 就行，但是我没有用过 nginx 啊~~~</p>
+<p>而且从来没有在本机上用过 nginx，只知道这个可以运行网站，别的啥都不知道了。当时直接懵了。</p>
+<p>然后现在又有一个比赛，也是会用到这个框架，吃了一次亏，不能再吃，而且网上好像对 win 环境部署 laravel 框架没有过多的相关文章，遇见了问题也无从下药【因为正式部署都是 linux 服务器部署，win 极少，那我就来补全吧，要不有小白想查资料也没地方查 QWQ】</p>
+<h1 id="开始部署-Laravel-框架"><a href="#开始部署-Laravel-框架" class="headerlink" title="开始部署 Laravel 框架"></a>开始部署 Laravel 框架</h1><blockquote>
+<p>免责声明：本教程只是实现在 win 环境进行测试开发部署，并非正式生产环境部署，正式生产环境部署涉及到的 nginx 安全相关的配置信息，本教程不会涉及</p>
+</blockquote>
+<p>文中分割线包裹部分为技术问题发生点与相对应的解决方法，如有遗漏或错误，可以联系我加以改正</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>准备一个小 P（phpstudy），一个待测试的 laravel 框架（内含一个测试 api）</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>在小 P 面板下载 nginx 服务后，再下载一个 laravel 需要的 php 版本，比如我使用的是 laravel10.x，那么需要的 php 版本为 8.2</p>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-14-32-20-image.png" class="">
+
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-14-32-35-image.png" class="">
+
+<p>小 P 面板的 nginx 服务不能做到像 Apache 那样使用指定 php 版本运行站点，这里 nginx 默认使用的是系统环境中的 php 版本。所以这里需要手动将小 P 中下载的 PHP 环境扔到系统环境中。</p>
+<h3 id="PHP-环境配置"><a href="#PHP-环境配置" class="headerlink" title="PHP 环境配置"></a>PHP 环境配置</h3><blockquote>
+<p>以下转载<a target="_blank" rel="noopener" href="https://www.cnblogs.com/shuaiandjun/p/10561839.html">windows 下搭建 nginx+php+laravel 开发环境(转) - 帅 LOVE 俊 - 博客园</a></p>
+</blockquote>
+<p>进入 php 文件夹，找到 php.ini-development 配置文件并 copy 一份重命名为 php.ini。</p>
+<p>双击打开 php.ini 配置文件</p>
+<p>搜索 extension_dir 找到配置项，把该配置项设置成 php 目录下 ext 的绝对路径（最好是绝对路径，也可以是相对路　　径”.&#x2F;ext”），如图：</p>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/eb6847408c7df5400ab0613a968ee0567ca73eb7.png" class="">
+
+<p>也可直接去除前面的分号       如：extension_dir &#x3D; “ext”</p>
+<p>ps：左边的;号要删除，该分号作用是注释，即分号后面的内容不参与执行，仅仅是备注。</p>
+<p>搜索 cgi.fix_pathinfo 找到配置项，取消注释并把该配置项设置成 1。</p>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/a584077e1a2612095eb409e79042f86a47eef446.png" class="">
+
+<p><code>cgi.fix_pathinfo</code>是用来设置在 cgi 模式下 PHP 是否提供 PATH_INFO 信息。</p>
+<p>因为 nginx 默认不会设置 PATH_INFO 的值，所以需要通过上面的方法来提供。</p>
+<p>ps：暂时开启这两个就可以执行了，其他配置项根据自己需求开启，不一一说明</p>
+<div style="text-align: center;">
+  <span style="border-top: 1px solid #000; padding: 0 10px; background-color: white;">
+    ——起始——
+  </span>
+</div>
+
+<h4 id="记事本修改-php-ini-文件权限问题"><a href="#记事本修改-php-ini-文件权限问题" class="headerlink" title="记事本修改 php.ini 文件权限问题"></a>记事本修改 php.ini 文件权限问题</h4><p>在部署 php 站点时，有时会需要配置 php 环境配置，比如数据库之类的。这些配置需要进入”php.ini”文件进行修改。</p>
+<p>但是有的开发者会习惯将开发环境放进 C 盘，但是对 C 盘中的文件进行修改时会遇见一些权限问题，如图</p>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-14-41-39-image.png" class="">
+
+<p>这里我也在网上查询了解决方法，但是没有解决，而且这里可能会涉及到一些安全问题，所以不懂的就别瞎捣鼓了，可以使用以下两种方法解决。</p>
+<h5 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h5><p>在其他目录配置好需要的插件后，再将环境&#x2F;配置文件拷贝进 C 盘中，文件的移动操作有管理员选项（所以为什么编辑后没有以管理员保存？火大），直接覆盖掉即可</p>
+<h5 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h5><p>将 PHP 系统环境不指向 C 盘，而是将 PHP 系统环境放在其他盘，这样就可以避免权限问题了</p>
+<div style="text-align: center;">
+  <span style="border-top: 1px solid #000; padding: 0 10px; background-color: white;">
+    ——结束——
+  </span>
+</div>
+
+<h3 id="nginx-配置"><a href="#nginx-配置" class="headerlink" title="nginx 配置"></a>nginx 配置</h3><p>因为使用的是小 P 的 nginx 服务，所以就要定位到其运行目录进行操作</p>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-14-57-13-image.png" class="">
+
+<p>在 nginx 目录下进入配置文件&#x2F;conf&#x2F;nginx.conf，然后将以下内容写进该文件中（注意以下配置中包含了文件中配置结构，请不要盲目复制粘贴使用，注意嵌套关系）</p>
+<pre><code class="json">http &#123;
+    server &#123;
+        listen       8011;//开启的端口
+        server_name  localhost;//站点地址，本地测试就用localhost
+        root G:\Laravel\example-app\public;// laravel/public/index.php地址
+
+        location / &#123;
+            index index.html index.htm index.php;
+            try_files $uri $uri/ /index.php?$query_string;
+        &#125;
+
+        location ~ \.php$ &#123;
+
+            fastcgi_pass   127.0.0.1:9000;// php-FPM/php-cgi监听地址
+            fastcgi_index  index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<div style="text-align: center;">
+  <span style="border-top: 1px solid #000; padding: 0 10px; background-color: white;">
+    ——起始——
+  </span>
+</div>
+
+<h4 id="部署后报错-403"><a href="#部署后报错-403" class="headerlink" title="部署后报错 403"></a>部署后报错 403</h4><p>nginx 根目录内有个文件夹为“html”，在这里是放站点的地方，然后在写 root 路径时就可以写“&#x2F;html&#x2F;…”</p>
+<p>但是，这里会涉及到一个问题，这个相对路径“&#x2F;”到底指向哪，理论上是“nginx&#x2F;html&#x2F;…”，但是他会报错 403 权限问题（具体什么原因我也知不道）</p>
+<p>这里直接使用绝对路径就可以避免这个问题</p>
+<div style="text-align: center;">
+  <span style="border-top: 1px solid #000; padding: 0 10px; background-color: white;">
+    ——结束——
+  </span>
+</div>
+
+<h3 id="PHP-环境启动"><a href="#PHP-环境启动" class="headerlink" title="PHP 环境启动"></a>PHP 环境启动</h3><p>nginx 启动后并不会自己去一同启动 php 环境，这点与 Apache 不一样。</p>
+<p>首先进入到你的 PHP 环境根目录下，然后在该目录启动 cmd 终端</p>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-15-25-16-image.png" class="">
+
+<p>然后输入指令</p>
+<pre><code class="batch">php-cgi.exe -b 127.0.0.1:9000 -c  php.ini
+</code></pre>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-15-27-14-image.png" class="">
+
+<p>输入指令后没有报错和自动换行即可，这里不会出现信息输出的</p>
+<div style="text-align: center;">
+  <span style="border-top: 1px solid #000; padding: 0 10px; background-color: white;">
+    ——起始——
+  </span>
+</div>
+
+<h4 id="进入站点报错-502"><a href="#进入站点报错-502" class="headerlink" title="进入站点报错 502"></a>进入站点报错 502</h4><p>检查 php-cgi 启动地址端口与 nginx 配置文件中的地址端口是否相同</p>
+<div style="text-align: center;">
+  <span style="border-top: 1px solid #000; padding: 0 10px; background-color: white;">
+    ——结束——
+  </span>
+</div>
+
+<h3 id="Laravel！启动！！！"><a href="#Laravel！启动！！！" class="headerlink" title="Laravel！启动！！！"></a>Laravel！启动！！！</h3><p>接下来进入测试 api 看看站点是否已经运行</p>
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-15-30-49-image.png" class="">
+
+<img src="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/2025-01-01-15-29-49-image.png" class="">
+
+<p>这里看到已经正常输出信息了，接下来愉快的开发去吧~~~ヾ(≧▽≦*)o</p>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p>心细的已经注意到了，我们启动 php 服务其实是手动的，这里其实可以不用去配置 php 系统环境以及去刻意关注 php 环境的位置。</p>
+<p>但是肯定不只开发这一个项目需要 php 环境，也不是只有这一个项目是需要手动去启动 php 服务的，所以配置好后，不仅方便此项目开发，也符合开发标准与习惯。</p>
+<p>养成良好的开发习惯是一个程序的基本素养，就比如说写 HTML，类名不能用“aa、bb、cc”命名一个道理</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://shenyuanol.github.io">Shen Yuan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://shenyuanol.github.io/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">https://shenyuanol.github.io/post/2025/01/01/PHP-Laravel框架win环境部署与问题解决/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://shenyuanol.github.io" target="_blank">深远</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/php/">php</a><a class="post-meta__tags" href="/tags/laravel/">laravel</a></div><div class="post-share"><div class="social-share" data-image="/images/shenyuan.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/post/2024/12/31/MC-WEB-UI%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%AB%99%E7%82%B9%E8%AE%BE%E8%AE%A1%E7%A8%BF/" title="MC_WEB UI设计与站点设计稿"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">MC_WEB UI设计与站点设计稿</div></div><div class="info-2"><div class="info-item-1">前端逻辑与部分安全设计（9 月 14 号）                         新增插件与后端逻辑[不完整版]（9 月 15 号）                 完善后端数据处理需求（9 月 18 号）                 日志系统暂时先不做，等全部做完后，日志系统会单独做一个系统塞进去 此设计并非最终效果，仍旧持续更 </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/shenyuan.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Shen Yuan</div><div class="author-info-description">有亿点恋爱脑的理工男......</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ShenYuanOL"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2-Laravel-%E6%A1%86%E6%9E%B6"><span class="toc-number">2.</span> <span class="toc-text">开始部署 Laravel 框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">2.1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number">2.2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.1.</span> <span class="toc-text">PHP 环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%B0%E4%BA%8B%E6%9C%AC%E4%BF%AE%E6%94%B9-php-ini-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">记事本修改 php.ini 文件权限问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A"><span class="toc-number">2.2.1.1.1.</span> <span class="toc-text">方法一：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A"><span class="toc-number">2.2.1.1.2.</span> <span class="toc-text">方法二：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx-%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.2.</span> <span class="toc-text">nginx 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%90%8E%E6%8A%A5%E9%94%99-403"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">部署后报错 403</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP-%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A8"><span class="toc-number">2.2.3.</span> <span class="toc-text">PHP 环境启动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E7%AB%99%E7%82%B9%E6%8A%A5%E9%94%99-502"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">进入站点报错 502</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Laravel%EF%BC%81%E5%90%AF%E5%8A%A8%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">2.2.4.</span> <span class="toc-text">Laravel！启动！！！</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E"><span class="toc-number">2.3.</span> <span class="toc-text">补充说明</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/2025/01/01/PHP-Laravel%E6%A1%86%E6%9E%B6win%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" title="PHP-Laravel框架win环境部署与问题解决">PHP-Laravel框架win环境部署与问题解决</a><time datetime="2025-01-01T06:06:29.000Z" title="发表于 2025-01-01 14:06:29">2025-01-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/2024/12/31/MC-WEB-UI%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%AB%99%E7%82%B9%E8%AE%BE%E8%AE%A1%E7%A8%BF/" title="MC_WEB UI设计与站点设计稿">MC_WEB UI设计与站点设计稿</a><time datetime="2024-12-31T05:53:20.000Z" title="发表于 2024-12-31 13:53:20">2024-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/2024/12/31/MC-WEB%E7%B3%BB%E7%BB%9F%E5%89%8D%E7%AB%AFUI%E8%AE%BE%E8%AE%A1/" title="MC_WEB系统前端UI设计">MC_WEB系统前端UI设计</a><time datetime="2024-12-31T05:46:27.000Z" title="发表于 2024-12-31 13:46:27">2024-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/2024/12/31/%E6%96%B0Flag%E7%AB%8B%E9%A1%B9-MC-WEB%E9%9B%86%E6%88%90%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91/" title="新Flag立项-MC_WEB集成系统开发">新Flag立项-MC_WEB集成系统开发</a><time datetime="2024-12-31T05:45:58.000Z" title="发表于 2024-12-31 13:45:58">2024-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/2024/12/21/%E3%80%90wallpaper%E6%95%99%E7%A8%8B%E3%80%91web%E5%A3%81%E7%BA%B8%E5%88%B6%E4%BD%9C/" title="【wallpaper教程】web壁纸制作">【wallpaper教程】web壁纸制作</a><time datetime="2024-12-21T01:03:34.000Z" title="发表于 2024-12-21 09:03:34">2024-12-21</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Shen Yuan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">希望文章对你有帮助~~~~§(*￣▽￣*)§</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="在本站搜索相关内容..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
