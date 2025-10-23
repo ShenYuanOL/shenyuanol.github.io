@@ -37,6 +37,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/2024-12-31-mc-web-integration-system-project': RouteRecordInfo<'/posts/2024-12-31-mc-web-integration-system-project', '/posts/2024-12-31-mc-web-integration-system-project', Record<never, never>, Record<never, never>>,
     '/posts/2025-01-01-php-laravel-windows-deployment': RouteRecordInfo<'/posts/2025-01-01-php-laravel-windows-deployment', '/posts/2025-01-01-php-laravel-windows-deployment', Record<never, never>, Record<never, never>>,
     '/posts/2025-01-19-vue-game-notes': RouteRecordInfo<'/posts/2025-01-19-vue-game-notes', '/posts/2025-01-19-vue-game-notes', Record<never, never>, Record<never, never>>,
+    '/posts/2025-10-23-newblog': RouteRecordInfo<'/posts/2025-10-23-newblog', '/posts/2025-10-23-newblog', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }
 
@@ -125,6 +126,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/2025-01-19-vue-game-notes.md': {
       routes: '/posts/2025-01-19-vue-game-notes'
+      views: never
+    }
+    'pages/posts/2025-10-23-newblog.md': {
+      routes: '/posts/2025-10-23-newblog'
       views: never
     }
     'pages/tags/index.md': {

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "valaxy": "0.26.6",
+    "valaxy-addon-vercount": "^0.0.7",
     "valaxy-theme-yun": "0.26.6"
   },
   "devDependencies": {

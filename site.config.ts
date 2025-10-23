@@ -4,7 +4,7 @@ export default defineSiteConfig({
   url: 'https://shenyuanol.github.io/',
   lang: 'zh-CN',
   title: '深远',
-  subtitle: '希望在这你能找到想要的帮助【找不到就算了】',
+  subtitle: '希望在这你能找到想要的帮助【找不到就算了，我会继续努力的QWQ】',
   author: {
     name: 'Shen Yuan',
     avatar: '/shenyuan.png',
@@ -28,8 +28,13 @@ export default defineSiteConfig({
 
 
   search: {
-    enable: true,
+    enable: false,
     type: 'engine',
+  },
+
+  
+  mediumZoom: {
+    enable: true,
   },
 
 

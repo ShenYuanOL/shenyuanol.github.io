@@ -1,5 +1,6 @@
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { defineValaxyConfig } from 'valaxy'
+import { addonVercount } from 'valaxy-addon-vercount'
 
 // add icons what you will need
 const safelist = [
@@ -13,6 +14,7 @@ export default defineValaxyConfig<UserThemeConfig>({
   // site config see site.config.ts
 
   theme: 'yun',
+
 
   themeConfig: {
     banner: {
@@ -45,4 +47,9 @@ export default defineValaxyConfig<UserThemeConfig>({
   },
 
   unocss: { safelist },
+  addons: [
+    addonVercount({
+      api: 'cn'
+    }),
+  ],
 })
