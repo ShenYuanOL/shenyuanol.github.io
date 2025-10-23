@@ -7,6 +7,7 @@ export default defineSiteConfig({
   subtitle: '希望在这你能找到想要的帮助【找不到就算了】',
   author: {
     name: 'Shen Yuan',
+    avatar: '/shenyuan.png',
     status:{
       emoji: '❤️',
     },
