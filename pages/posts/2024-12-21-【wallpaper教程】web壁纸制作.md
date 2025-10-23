@@ -30,7 +30,7 @@ categories:
 
 > 基本的网页结构即可，各个文件夹和文件的位置对于项目根目录来说没有硬性要求，但为了良好的编程习惯，建议将对应的文件和文件夹整理成合理的结构
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-09-25-46-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-09-25-46-image.png)
 
 --项目根目录
 
@@ -46,7 +46,7 @@ categories:
 
 ### wallpaper（壁纸制作完毕后出现的文件）
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-09-30-21-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-09-30-21-image.png)
 
 --项目根目录
 
@@ -72,13 +72,13 @@ categories:
 
 将项目根目录的index.html拖入wallpaper编辑器新建项目小窗即可，wallpaper将自动导入inedx.html同级目录的所有文件
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-10-55-57-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-10-55-57-image.png)
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-11-16-14-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-11-16-14-image.png)
 
 建议新建一个index.html文件导入后，直接进入导入后的目录进行开发工作，方便后续开发过程中的效果预览
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-49-48-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-49-48-image.png)
 
 ### 常规开发方式
 
@@ -94,13 +94,13 @@ categories:
 
 ##### 浏览器开启wallpaper预览服务
 
-转到wallpaper应用程序的设置中，在”常规“选项卡中将”CEF开发工具端口“填入”8080“（建议值，如果80口被占用，可以选择其他端口）![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-21-01-image.png)
+转到wallpaper应用程序的设置中，在”常规“选项卡中将”CEF开发工具端口“填入”8080“（建议值，如果80口被占用，可以选择其他端口）![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-21-01-image.png)
 
 然后在浏览器地址栏输入网址：localhost:8080，即可找到wallpaper中使用网页技术开发的壁纸项目入口
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-29-59-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-29-59-image.png)
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-30-42-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-14-30-42-image.png)
 
 点进去之后默认开启一个开发者工具，但是这个开发者工具貌似有点老，但是足够使用了
 
@@ -126,11 +126,11 @@ HTML、CSS、JS遵循常规网页开发规则，语法格式使用规范方式�
 
 ## 壁纸样式与wallpaper用户自定义属性
 
-![用户可自定义属性在wallpaper中](2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-15-09-01-image.png)
+![用户可自定义属性在wallpaper中](/posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-15-09-01-image.png)
 
 用户可以在这个地方对壁纸的一些属性进行自定义，与其相对应的有一个文件”porject.json“。
 
-![porject.json](2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-15-35-25-image.png)
+![porject.json](/posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-15-35-25-image.png)
 
 该文件将在wallpaper项目创建后（导入index.html后）自动生成。
 
@@ -396,7 +396,7 @@ HTML、CSS、JS遵循常规网页开发规则，语法格式使用规范方式�
 
 对于directory控件中两种模式的解释，参照下图
 
-![](./2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-16-47-52-image.png)
+![](/posts/ /posts/2024-12-21-【wallpaper教程】web壁纸制作/2024-12-21-16-47-52-image.png)
 
 --- 
 

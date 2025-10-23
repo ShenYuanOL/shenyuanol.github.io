@@ -33,7 +33,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题': RouteRecordInfo<'/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题', '/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题', Record<never, never>, Record<never, never>>,
     '/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘': RouteRecordInfo<'/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘', '/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘', Record<never, never>, Record<never, never>>,
     '/posts/2024-12-21-【wallpaper教程】web壁纸制作': RouteRecordInfo<'/posts/2024-12-21-【wallpaper教程】web壁纸制作', '/posts/2024-12-21-【wallpaper教程】web壁纸制作', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-31-MC-WEB-UI设计与站点设计稿': RouteRecordInfo<'/posts/2024-12-31-MC-WEB-UI设计与站点设计稿', '/posts/2024-12-31-MC-WEB-UI设计与站点设计稿', Record<never, never>, Record<never, never>>,
     '/posts/2024-12-31-MC-WEB系统前端UI设计': RouteRecordInfo<'/posts/2024-12-31-MC-WEB系统前端UI设计', '/posts/2024-12-31-MC-WEB系统前端UI设计', Record<never, never>, Record<never, never>>,
     '/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发': RouteRecordInfo<'/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发', '/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发', Record<never, never>, Record<never, never>>,
     '/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决': RouteRecordInfo<'/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决', '/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决', Record<never, never>, Record<never, never>>,
@@ -110,10 +109,6 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/2024-12-21-【wallpaper教程】web壁纸制作.md': {
       routes: '/posts/2024-12-21-【wallpaper教程】web壁纸制作'
-      views: never
-    }
-    'pages/posts/2024-12-31-MC-WEB-UI设计与站点设计稿.md': {
-      routes: '/posts/2024-12-31-MC-WEB-UI设计与站点设计稿'
       views: never
     }
     'pages/posts/2024-12-31-MC-WEB系统前端UI设计.md': {
