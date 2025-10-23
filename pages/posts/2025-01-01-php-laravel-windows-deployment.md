@@ -32,9 +32,9 @@ laravel 框架-nginx 真的好折磨人啊~
 
 在小 P 面板下载 nginx 服务后，再下载一个 laravel 需要的 php 版本，比如我使用的是 laravel10.x，那么需要的 php 版本为 8.2
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-14-32-20-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-14-32-20-image.png)
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-14-32-35-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-14-32-35-image.png)
 
 小 P 面板的 nginx 服务不能做到像 Apache 那样使用指定 php 版本运行站点，这里 nginx 默认使用的是系统环境中的 php 版本。所以这里需要手动将小 P 中下载的 PHP 环境扔到系统环境中。
 
@@ -48,7 +48,7 @@ laravel 框架-nginx 真的好折磨人啊~
 
 搜索 extension_dir 找到配置项，把该配置项设置成 php 目录下 ext 的绝对路径（最好是绝对路径，也可以是相对路　　径"./ext"），如图：
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/eb6847408c7df5400ab0613a968ee0567ca73eb7.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/eb6847408c7df5400ab0613a968ee0567ca73eb7.png)
 
 也可直接去除前面的分号       如：extension_dir = "ext"
 
@@ -56,7 +56,7 @@ ps：左边的;号要删除，该分号作用是注释，即分号后面的内�
 
 搜索 cgi.fix_pathinfo 找到配置项，取消注释并把该配置项设置成 1。
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/a584077e1a2612095eb409e79042f86a47eef446.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/a584077e1a2612095eb409e79042f86a47eef446.png)
 
 `cgi.fix_pathinfo`是用来设置在 cgi 模式下 PHP 是否提供 PATH_INFO 信息。
 
@@ -76,7 +76,7 @@ ps：暂时开启这两个就可以执行了，其他配置项根据自己需求
 
 但是有的开发者会习惯将开发环境放进 C 盘，但是对 C 盘中的文件进行修改时会遇见一些权限问题，如图
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-14-41-39-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-14-41-39-image.png)
 
 这里我也在网上查询了解决方法，但是没有解决，而且这里可能会涉及到一些安全问题，所以不懂的就别瞎捣鼓了，可以使用以下两种方法解决。
 
@@ -98,7 +98,7 @@ ps：暂时开启这两个就可以执行了，其他配置项根据自己需求
 
 因为使用的是小 P 的 nginx 服务，所以就要定位到其运行目录进行操作
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-14-57-13-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-14-57-13-image.png)
 
 在 nginx 目录下进入配置文件/conf/nginx.conf，然后将以下内容写进该文件中（注意以下配置中包含了文件中配置结构，请不要盲目复制粘贴使用，注意嵌套关系）
 
@@ -151,7 +151,7 @@ nginx 启动后并不会自己去一同启动 php 环境，这点与 Apache 不�
 
 首先进入到你的 PHP 环境根目录下，然后在该目录启动 cmd 终端
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-15-25-16-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-15-25-16-image.png)
 
 然后输入指令
 
@@ -159,7 +159,7 @@ nginx 启动后并不会自己去一同启动 php 环境，这点与 Apache 不�
 php-cgi.exe -b 127.0.0.1:9000 -c  php.ini
 ```
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-15-27-14-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-15-27-14-image.png)
 
 输入指令后没有报错和自动换行即可，这里不会出现信息输出的
 
@@ -183,9 +183,9 @@ php-cgi.exe -b 127.0.0.1:9000 -c  php.ini
 
 接下来进入测试 api 看看站点是否已经运行
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-15-30-49-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-15-30-49-image.png)
 
-![](/posts/ /posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决/2025-01-01-15-29-49-image.png)
+![](/posts/2025-01-01-php-laravel-windows-deployment/2025-01-01-15-29-49-image.png)
 
 这里看到已经正常输出信息了，接下来愉快的开发去吧~~~ヾ(≧▽≦\*)o
 

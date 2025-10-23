@@ -18,7 +18,7 @@ this[<数据名>]
 
 拖拽操作中targetBox.appendChild()方法与容器for循环渲染方法冲突，这样会导致拖拽操作结束后，容器中会出现两个相同id的item，这样会影响后续拖拽操作。
 
-![](/posts/ /posts/2025-01-19-VUE-Game笔记/2025-01-19-11-26-39-image.png)
+![](/posts/2025-01-19-vue-game-notes/2025-01-19-11-26-39-image.png)
 
 如果仅仅是实现视觉上拖拽，而不需要对拖拽后的数据进行逻辑处理，那么使用原生appendChild将DOM元素添加进去即可。
 
@@ -30,8 +30,8 @@ this[<数据名>]
 
 #### 错
 
-![](/posts/ /posts/2025-01-19-VUE-Game笔记/2025-01-19-11-32-34-image.png)
+![](/posts/2025-01-19-vue-game-notes/2025-01-19-11-32-34-image.png)
 
 #### 对
 
-![](/posts/ /posts/2025-01-19-VUE-Game笔记/2025-01-19-11-31-43-image.png)
+![](/posts/2025-01-19-vue-game-notes/2025-01-19-11-31-43-image.png)

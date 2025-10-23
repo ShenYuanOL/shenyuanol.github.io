@@ -36,7 +36,7 @@ npm install hexo -g
 
 安装完毕后在自己的硬盘中找个地方（禁止C盘战士）新建一个文件夹，然后在文件管理器的地址栏输入”cmd“快速在该文件夹调用cmd
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-13-30-42-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-13-30-42-image.png)
 
 然后在终端中输入以下指令进行hexo项目初始化
 
@@ -82,11 +82,11 @@ hexo new post "新的文件"
 
 然后我就可以在我的文件目录”G:\Blog\source\_posts\2024-12-07-新的文件.md“找到我的博客文章的文件
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-13-58-06-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-13-58-06-image.png)
 
 进入文件后，文件默认自带三行内容
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-13-59-10-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-13-59-10-image.png)
 
 title即文章标题，date为框架自动生成的时间戳信息，tags部分为文章标签，支持多个标签。
 
@@ -107,7 +107,7 @@ hexo server
 
 第一条指令是生成静态文件（可以理解为MD文件转换为HTML），第二条指令是在本地4000端口开启预览服务，执行成功后就可以在<u> *localhost:4000* </u>预览站点
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-14-08-21-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-14-08-21-image.png)
 
 ## GitHub设置
 
@@ -127,7 +127,7 @@ shenyuanol.github.io
 
 然后如下图操作（仓库名有一个验重，如果名称不可用就会报红，比如我这里我已经创建了该仓库了，就不能再创建了）
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-14-19-58-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-14-19-58-image.png)
 
 创建完毕后，使用git命令，将自己的测试内容全都覆盖到仓库中。
 
@@ -160,15 +160,15 @@ hexo deploy
 > 
 > 如有需求，请使用Git的push方法上传，并开启仓库分支，将源文件与站点文件双份存储，开启站点时指向站点文件分支即可
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-14-34-55-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-14-34-55-image.png)
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-14-35-15-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-14-35-15-image.png)
 
 ### GitHub博客模式设置
 
 当所有文件上传之后，转到仓库设置（setting）-页面（pages）
 
-![](/posts/ /posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题/2024-12-07-14-37-32-image.png)
+![](/posts/2024-12-07-github-hexo-first-site-setup/2024-12-07-14-37-32-image.png)
 
 source模式改为分支模式，branch中选择你站点的分支，然后点击”save“执行更改。
 

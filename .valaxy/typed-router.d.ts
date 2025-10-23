@@ -28,15 +28,15 @@ declare module 'vue-router/auto-routes' {
     '/links/': RouteRecordInfo<'/links/', '/links', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题': RouteRecordInfo<'/posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题', '/posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-07-HTML-CSS笔记': RouteRecordInfo<'/posts/2024-12-07-HTML-CSS笔记', '/posts/2024-12-07-HTML-CSS笔记', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题': RouteRecordInfo<'/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题', '/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘': RouteRecordInfo<'/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘', '/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-21-【wallpaper教程】web壁纸制作': RouteRecordInfo<'/posts/2024-12-21-【wallpaper教程】web壁纸制作', '/posts/2024-12-21-【wallpaper教程】web壁纸制作', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-31-MC-WEB系统前端UI设计': RouteRecordInfo<'/posts/2024-12-31-MC-WEB系统前端UI设计', '/posts/2024-12-31-MC-WEB系统前端UI设计', Record<never, never>, Record<never, never>>,
-    '/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发': RouteRecordInfo<'/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发', '/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发', Record<never, never>, Record<never, never>>,
-    '/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决': RouteRecordInfo<'/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决', '/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决', Record<never, never>, Record<never, never>>,
-    '/posts/2025-01-19-VUE-Game笔记': RouteRecordInfo<'/posts/2025-01-19-VUE-Game笔记', '/posts/2025-01-19-VUE-Game笔记', Record<never, never>, Record<never, never>>,
+    '/posts/2024-12-07-github-hexo-first-site-setup': RouteRecordInfo<'/posts/2024-12-07-github-hexo-first-site-setup', '/posts/2024-12-07-github-hexo-first-site-setup', Record<never, never>, Record<never, never>>,
+    '/posts/2024-12-07-html-css-notes': RouteRecordInfo<'/posts/2024-12-07-html-css-notes', '/posts/2024-12-07-html-css-notes', Record<never, never>, Record<never, never>>,
+    '/posts/2024-12-08-github-hexo-vue-spa-theme-issues': RouteRecordInfo<'/posts/2024-12-08-github-hexo-vue-spa-theme-issues', '/posts/2024-12-08-github-hexo-vue-spa-theme-issues', Record<never, never>, Record<never, never>>,
+    '/posts/2024-12-10-secure-keyboard-inspiration': RouteRecordInfo<'/posts/2024-12-10-secure-keyboard-inspiration', '/posts/2024-12-10-secure-keyboard-inspiration', Record<never, never>, Record<never, never>>,
+    '/posts/2024-12-21-wallpaper-engine-web-tutorial': RouteRecordInfo<'/posts/2024-12-21-wallpaper-engine-web-tutorial', '/posts/2024-12-21-wallpaper-engine-web-tutorial', Record<never, never>, Record<never, never>>,
+    '/posts/2024-12-31-mc-web-frontend-ui-design': RouteRecordInfo<'/posts/2024-12-31-mc-web-frontend-ui-design', '/posts/2024-12-31-mc-web-frontend-ui-design', Record<never, never>, Record<never, never>>,
+    '/posts/2024-12-31-mc-web-integration-system-project': RouteRecordInfo<'/posts/2024-12-31-mc-web-integration-system-project', '/posts/2024-12-31-mc-web-integration-system-project', Record<never, never>, Record<never, never>>,
+    '/posts/2025-01-01-php-laravel-windows-deployment': RouteRecordInfo<'/posts/2025-01-01-php-laravel-windows-deployment', '/posts/2025-01-01-php-laravel-windows-deployment', Record<never, never>, Record<never, never>>,
+    '/posts/2025-01-19-vue-game-notes': RouteRecordInfo<'/posts/2025-01-19-vue-game-notes', '/posts/2025-01-19-vue-game-notes', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }
 
@@ -91,40 +91,40 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/'
       views: never
     }
-    'pages/posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题.md': {
-      routes: '/posts/2024-12-07-GitHub-Hexo初次建站简单流程与问题'
+    'pages/posts/2024-12-07-github-hexo-first-site-setup.md': {
+      routes: '/posts/2024-12-07-github-hexo-first-site-setup'
       views: never
     }
-    'pages/posts/2024-12-07-HTML-CSS笔记.md': {
-      routes: '/posts/2024-12-07-HTML-CSS笔记'
+    'pages/posts/2024-12-07-html-css-notes.md': {
+      routes: '/posts/2024-12-07-html-css-notes'
       views: never
     }
-    'pages/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题.md': {
-      routes: '/posts/2024-12-08-GithHub-Hexo-VUE单页面主题的问题'
+    'pages/posts/2024-12-08-github-hexo-vue-spa-theme-issues.md': {
+      routes: '/posts/2024-12-08-github-hexo-vue-spa-theme-issues'
       views: never
     }
-    'pages/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘.md': {
-      routes: '/posts/2024-12-10-《真-安全键盘》-灵感来自于河北农信的密码输入键盘'
+    'pages/posts/2024-12-10-secure-keyboard-inspiration.md': {
+      routes: '/posts/2024-12-10-secure-keyboard-inspiration'
       views: never
     }
-    'pages/posts/2024-12-21-【wallpaper教程】web壁纸制作.md': {
-      routes: '/posts/2024-12-21-【wallpaper教程】web壁纸制作'
+    'pages/posts/2024-12-21-wallpaper-engine-web-tutorial.md': {
+      routes: '/posts/2024-12-21-wallpaper-engine-web-tutorial'
       views: never
     }
-    'pages/posts/2024-12-31-MC-WEB系统前端UI设计.md': {
-      routes: '/posts/2024-12-31-MC-WEB系统前端UI设计'
+    'pages/posts/2024-12-31-mc-web-frontend-ui-design.md': {
+      routes: '/posts/2024-12-31-mc-web-frontend-ui-design'
       views: never
     }
-    'pages/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发.md': {
-      routes: '/posts/2024-12-31-新Flag立项-MC-WEB集成系统开发'
+    'pages/posts/2024-12-31-mc-web-integration-system-project.md': {
+      routes: '/posts/2024-12-31-mc-web-integration-system-project'
       views: never
     }
-    'pages/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决.md': {
-      routes: '/posts/2025-01-01-PHP-Laravel框架win环境部署与问题解决'
+    'pages/posts/2025-01-01-php-laravel-windows-deployment.md': {
+      routes: '/posts/2025-01-01-php-laravel-windows-deployment'
       views: never
     }
-    'pages/posts/2025-01-19-VUE-Game笔记.md': {
-      routes: '/posts/2025-01-19-VUE-Game笔记'
+    'pages/posts/2025-01-19-vue-game-notes.md': {
+      routes: '/posts/2025-01-19-vue-game-notes'
       views: never
     }
     'pages/tags/index.md': {

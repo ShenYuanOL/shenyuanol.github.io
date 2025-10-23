@@ -10,7 +10,7 @@ categories:
 
 系统的前端界面也都画出来了，大概长这样（懒得做站内预览了，放个缩略图就完事得了）
 
-![](/posts/ /posts/2024-12-31-MC-WEB系统前端UI设计/4c74b4d90f6a72ea3524bf4eb7ae5051e1b1ff94.png)
+![](/posts/2024-12-31-mc-web-frontend-ui-design/4c74b4d90f6a72ea3524bf4eb7ae5051e1b1ff94.png)
 
 这个只是一个概览图，实际开发的时候遇见问题会微调的，但基本也就长这样。
 
