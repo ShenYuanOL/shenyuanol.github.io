@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://shenyuanol.github.io/</id>
+    <title>深远</title>
+    <updated>2025-10-23T17:33:04.388Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Shen Yuan</name>
+        <email>i@valaxy.site</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="https://shenyuanol.github.io/"/>
+    <link rel="self" href="https://shenyuanol.github.io/atom.xml"/>
+    <subtitle>有亿点恋爱脑的理工男......</subtitle>
+    <logo>https://shenyuanol.github.io/shenyuan.png</logo>
+    <icon>https://shenyuanol.github.io/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2025 © Shen Yuan</rights>
+    <entry>
+        <title type="html"><![CDATA[《真-安全键盘》---灵感来自于河北农信的密码输入键盘]]></title>
+        <id>https://shenyuanol.github.io/posts/2024-12-10-secure-keyboard-inspiration</id>
+        <link href="https://shenyuanol.github.io/posts/2024-12-10-secure-keyboard-inspiration"/>
+        <updated>2024-12-10T19:24:25.000Z</updated>
+        <content type="html"><![CDATA[<h1>前言</h1>
+<p>本人有张储蓄卡是农村信用社的，平时查余额都用他家的软件查。有意思的事，他家输入密码的键盘，每次打开那个界面键盘数字都会被打乱，感觉挺有意思的，然后想着用JS复现一下。</p>
+<h1>预览</h1>
+<p>![]</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2024-12-10-secure-keyboard-inspiration" target="_blank">https://shenyuanol.github.io/posts/2024-12-10-secure-keyboard-inspiration</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.161Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【wallpaper教程】web壁纸制作]]></title>
+        <id>https://shenyuanol.github.io/posts/2024-12-21-wallpaper-engine-web-tutorial</id>
+        <link href="https://shenyuanol.github.io/posts/2024-12-21-wallpaper-engine-web-tutorial"/>
+        <updated>2024-12-21T09:03:34.000Z</updated>
+        <content type="html"><![CDATA[<h1>前言</h1>
+<p>偶然间竟然发现wallpaper竟然支持网页制作壁纸，当时正苦恼官方的SceneScript没有可以参考的技术文档，就想着可不可以用JavaScript开发。然后就在创意工坊找到”网页“</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2024-12-21-wallpaper-engine-web-tutorial" target="_blank">https://shenyuanol.github.io/posts/2024-12-21-wallpaper-engine-web-tutorial</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.161Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MC_WEB系统前端UI设计]]></title>
+        <id>https://shenyuanol.github.io/posts/2024-12-31-mc-web-frontend-ui-design</id>
+        <link href="https://shenyuanol.github.io/posts/2024-12-31-mc-web-frontend-ui-design"/>
+        <updated>2024-12-31T13:46:27.000Z</updated>
+        <content type="html"><![CDATA[<p>本来这篇文章两天前就该发出来了，但是服务器抽风，自动更新把站点异常关闭了，宝塔面板也跟着抽风，死活启动不了😒</p>
+<p>系统的前端界面也都画出来了，大概长这样（懒得做站内预览了，放个缩略图就完事得了）</p>
+<p>!</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2024-12-31-mc-web-frontend-ui-design" target="_blank">https://shenyuanol.github.io/posts/2024-12-31-mc-web-frontend-ui-design</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.161Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新Flag立项-MC_WEB集成系统开发]]></title>
+        <id>https://shenyuanol.github.io/posts/2024-12-31-mc-web-integration-system-project</id>
+        <link href="https://shenyuanol.github.io/posts/2024-12-31-mc-web-integration-system-project"/>
+        <updated>2024-12-31T13:45:58.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>本文为旧博客文章，现迁移至GitHub博客</p>
+</blockquote>
+<p>大一的时光说过去就过去了，依旧没对象…哈哈</p>
+<p>当然，大一虽然依旧没对象，但是学习新知识可是陪我走了整整一年呢，也参加了一些比赛，也学习了一些新东西，比</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2024-12-31-mc-web-integration-system-project" target="_blank">https://shenyuanol.github.io/posts/2024-12-31-mc-web-integration-system-project</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.161Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PHP-Laravel框架win环境部署与问题解决]]></title>
+        <id>https://shenyuanol.github.io/posts/2025-01-01-php-laravel-windows-deployment</id>
+        <link href="https://shenyuanol.github.io/posts/2025-01-01-php-laravel-windows-deployment"/>
+        <updated>2025-01-01T14:06:29.000Z</updated>
+        <content type="html"><![CDATA[<h1>前言</h1>
+<p>laravel 框架-nginx 真的好折磨人啊~</p>
+<p>最开始接触是在 24 年暑假的一个比赛，当时大意了，因为我本机平时都是使用 Apache 运行 PHP 项目，指定运行目录就能运行项</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2025-01-01-php-laravel-windows-deployment" target="_blank">https://shenyuanol.github.io/posts/2025-01-01-php-laravel-windows-deployment</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.161Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VUE_Game笔记]]></title>
+        <id>https://shenyuanol.github.io/posts/2025-01-19-vue-game-notes</id>
+        <link href="https://shenyuanol.github.io/posts/2025-01-19-vue-game-notes"/>
+        <updated>2025-01-19T11:21:50.000Z</updated>
+        <content type="html"><![CDATA[<h1>ClickAllBlock</h1>
+<h1>Classify</h1>
+<h2>使用变量而非直接this.操作data()中的数据</h2>
+<pre><code class="language-js">this[&lt;数据名&gt;]
+</code></pre>
+<h2>避免直接操作DOM，而是尽量</h2>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2025-01-19-vue-game-notes" target="_blank">https://shenyuanol.github.io/posts/2025-01-19-vue-game-notes</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.161Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新博客（新框架）]]></title>
+        <id>https://shenyuanol.github.io/posts/2025-10-23-newblog</id>
+        <link href="https://shenyuanol.github.io/posts/2025-10-23-newblog"/>
+        <updated>2025-10-23T17:21:35.000Z</updated>
+        <content type="html"><![CDATA[<h2>前言</h2>
+<p>好久没有写博客文章了，距离上次提交还在上次😁</p>
+<h2>新的博客</h2>
+<p>之前使用的Hexo框架，虽然那个主题比较喜欢，但是感觉那个编译会出问题，在我编写长文章 [【wallpaper教程】we</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2025-10-23-newblog" target="_blank">https://shenyuanol.github.io/posts/2025-10-23-newblog</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.161Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub-Hexo初次建站简单流程与问题]]></title>
+        <id>https://shenyuanol.github.io/posts/2024-12-07-github-hexo-first-site-setup</id>
+        <link href="https://shenyuanol.github.io/posts/2024-12-07-github-hexo-first-site-setup"/>
+        <updated>2024-12-07T10:45:30.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>终于是吃上Github的个人博客建站了，之前使用的宝塔-wordpress建站，由于租赁的服务器自动更新导致的宝塔服务崩溃的问题，把服务器站点关了，不仅个人博客关了，自己的项目也停了（当然主要问</p>
+</blockquote>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2024-12-07-github-hexo-first-site-setup" target="_blank">https://shenyuanol.github.io/posts/2024-12-07-github-hexo-first-site-setup</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.160Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HTML/CSS笔记]]></title>
+        <id>https://shenyuanol.github.io/posts/2024-12-07-html-css-notes</id>
+        <link href="https://shenyuanol.github.io/posts/2024-12-07-html-css-notes"/>
+        <updated>2024-12-07T15:06:56.000Z</updated>
+        <content type="html"><![CDATA[<h1>HTML</h1>
+<h2>零碎知识点</h2>
+<h3>语义元素</h3>
+<p>可以理解为把HTML标签用人话描述出来，并且自带了一些样式。</p>
+<p>旧的HTML4只能通过定义class或者id来给予特定容器以特定的样式类型，H</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2024-12-07-html-css-notes" target="_blank">https://shenyuanol.github.io/posts/2024-12-07-html-css-notes</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.160Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GithHub-Hexo-VUE单页面主题的问题]]></title>
+        <id>https://shenyuanol.github.io/posts/2024-12-08-github-hexo-vue-spa-theme-issues</id>
+        <link href="https://shenyuanol.github.io/posts/2024-12-08-github-hexo-vue-spa-theme-issues"/>
+        <updated>2024-12-08T21:31:04.000Z</updated>
+        <content type="html"><![CDATA[<h2>前情提要</h2>
+<p>你在我的博客中某个文章页面刷新，你就会发现报错“404”，但这种情况在原版Hexo是不会出现的，问题在于我用的主题。</p>
+<h2>问题</h2>
+<p>我所用的主题[Hexo Aurora Docs</p>
+<br/><p>访问 <a href="https://shenyuanol.github.io/posts/2024-12-08-github-hexo-vue-spa-theme-issues" target="_blank">https://shenyuanol.github.io/posts/2024-12-08-github-hexo-vue-spa-theme-issues</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>Shen Yuan</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-10-23T17:32:18.160Z</published>
+    </entry>
+</feed>
