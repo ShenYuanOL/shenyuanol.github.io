@@ -38,6 +38,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/2025-01-01-php-laravel-windows-deployment': RouteRecordInfo<'/posts/2025-01-01-php-laravel-windows-deployment', '/posts/2025-01-01-php-laravel-windows-deployment', Record<never, never>, Record<never, never>>,
     '/posts/2025-01-19-vue-game-notes': RouteRecordInfo<'/posts/2025-01-19-vue-game-notes', '/posts/2025-01-19-vue-game-notes', Record<never, never>, Record<never, never>>,
     '/posts/2025-10-23-newblog': RouteRecordInfo<'/posts/2025-10-23-newblog', '/posts/2025-10-23-newblog', Record<never, never>, Record<never, never>>,
+    '/posts/2025-10-26-how-to-use-mstsc-in-your-winpc': RouteRecordInfo<'/posts/2025-10-26-how-to-use-mstsc-in-your-winpc', '/posts/2025-10-26-how-to-use-mstsc-in-your-winpc', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }
 
@@ -130,6 +131,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/2025-10-23-newblog.md': {
       routes: '/posts/2025-10-23-newblog'
+      views: never
+    }
+    'pages/posts/2025-10-26-how-to-use-mstsc-in-your-winpc.md': {
+      routes: '/posts/2025-10-26-how-to-use-mstsc-in-your-winpc'
       views: never
     }
     'pages/tags/index.md': {
