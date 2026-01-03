@@ -120,3 +120,8 @@ Windows IP 配置
 ![mstscPaw](/posts/2025-10-26-how-to-use-mstsc-in-your-winpc/mstscPaw.png)
 
 ### 连上了！玩吧
+
+## 外网（非局域网远程桌面）
+
+外网访问的方式就是把你的内网IP映射出去，这样就可以通过外网地址访问你的内网地址了。
+映射软件我推荐使用 [樱花FRP](https://www.natfrp.com/) 
