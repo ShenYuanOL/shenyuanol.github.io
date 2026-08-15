@@ -1,0 +1,35 @@
+{
+  "name": "xiao",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "dev:drafts": "set XIAO_INCLUDE_DRAFTS=1&& vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "new": "node scripts/new.mjs",
+    "tidy": "node scripts/tidy.mjs",
+    "validate": "node scripts/validate.mjs",
+    "gen:redirects": "node scripts/gen-redirects.mjs",
+    "migrate": "node scripts/migrate.mjs",
+    "xiao:update": "node scripts/xiao-update.mjs",
+    "annotate": "node scripts/annotate.mjs"
+  },
+  "dependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify/vue": "^4.3.0",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^26.2.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^5.2.3",
+    "pinyin-pro": "^3.29.0",
+    "puppeteer-core": "^25.7.0",
+    "typescript": "^5.7.3"
+  },
+  "license": "CC-BY-NC-SA-4.0"
+}
