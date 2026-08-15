@@ -680,9 +680,6 @@ html.dark .x-post-card:hover {
   align-items: center;
   text-align: center;
   padding: var(--space-8) var(--space-6);
-  background: var(--card-bg);
-  border-radius: var(--radius-large);
-  box-shadow: var(--shadow-card);
   margin-bottom: var(--space-5);
 }
 
@@ -700,7 +697,7 @@ html.dark .x-post-card:hover {
   font-weight: 700;
   overflow: hidden;
   margin-bottom: var(--space-4);
-  box-shadow: 0 4px 14px oklch(0.70 0.14 var(--hue) / 0.25);
+  box-shadow: 0px 0px 100px oklch(0.70 0.14 var(--hue) / 0.95);
 }
 
 .x-home-hero-avatar img {
@@ -720,7 +717,7 @@ html.dark .x-post-card:hover {
 
 .x-home-hero-subtitle {
   margin: var(--space-3) 0 0;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   color: var(--text-secondary);
 }
 
@@ -772,69 +769,6 @@ html.dark .x-post-card:hover {
   color: var(--deep-text);
 }
 
-/* ---- 两栏：侧栏在左 + 文章列表在右 ---- */
-.x-home-grid {
-  display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: var(--space-5);
-  align-items: start;
-}
-
-.x-home-aside {
-  position: sticky;
-  top: 88px;
-  align-self: start;
-  max-height: calc(100vh - 280px);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  scrollbar-width: none;
-  overscroll-behavior: contain;
-}
-
-.x-home-main {
-  min-width: 0;
-  min-height: 80vh;
-}
-
-.x-home-section-head {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-family: var(--font-display);
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  color: var(--deep-text);
-  margin-bottom: var(--space-5);
-}
-
-.x-home-section-head::before {
-  content: '';
-  width: 4px;
-  height: 22px;
-  border-radius: var(--radius-medium);
-  background: var(--primary);
-}
-
-.x-home-more {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  margin-top: var(--space-2);
-  padding: 10px 22px;
-  border-radius: var(--radius-full);
-  background: var(--btn-bg);
-  color: var(--btn-content);
-  font-weight: 600;
-  font-size: var(--font-size-sm);
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.x-home-more:hover {
-  background: var(--btn-bg-hover);
-  color: var(--deep-text);
-}
 
 @media (max-width: 1024px) {
   .x-home-grid {

@@ -21,7 +21,7 @@ export const site: SiteConfig = {
   url: 'https://shenyuanol.github.io/',
   lang: 'zh-CN',
   title: 'ShenYuan|深远',
-  subtitle: '没人爱的技术男罢了......希望在这你能找到想要的帮助【找不到就算了，我会继续努力的QWQ】',
+  subtitle: '世界和平',
   description: '基于「晓」框架的深远个人博客与开发文档，记录技术、生活与思考。',
   author: {
     name: 'Shen Yuan',
