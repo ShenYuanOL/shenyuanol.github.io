@@ -149,7 +149,7 @@ export default defineConfig({
         name: 'xiao-redirects-dev',
         configureServer(server) {
           const redirects = loadRedirects();
-          const base = '/XiaoBlog/';
+          const base = '/';
           server.middlewares.use((req, res, next) => {
             const raw = (req.url ?? '').split('?')[0];
             const pathname = raw.startsWith(base) ? raw.slice(base.length - 1) : raw;

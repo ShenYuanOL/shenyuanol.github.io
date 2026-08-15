@@ -1,5 +1,52 @@
 /* 晓 · 站点外壳（layer: shell）——对齐 Fuwari */
 
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-gutter: auto;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+html, body {
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 .x-site {
   min-height: 100vh;
   display: flex;

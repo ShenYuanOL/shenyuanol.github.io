@@ -13,10 +13,12 @@ const { page, frontmatter } = useData();
 
 function kind(): 'md' | 'post' | 'auto' | 'home' | 'doc' | 'not-found' {
   const rel = page.value.relativePath;
+  const autoPage = frontmatter.value.autoPage;
+
   if (rel === '404.md') return 'not-found';
   if (frontmatter.value.home === true) return 'home';
   if (rel.startsWith('dev/')) return 'doc';
-  if (typeof frontmatter.value.autoPage === 'string') return 'auto';
+  if (typeof autoPage === 'string' && ['archives', 'tags', 'categories'].includes(autoPage)) return 'auto';
   if (typeof frontmatter.value.slug === 'string' && frontmatter.value.slug) return 'post';
   return 'md';
 }
@@ -28,16 +30,16 @@ function kind(): 'md' | 'post' | 'auto' | 'home' | 'doc' | 'not-found' {
     <div v-else-if="kind() === 'home'" class="x-home">
       <Content />
     </div>
+    <AutoPageView v-else-if="kind() === 'auto'" :type="frontmatter.autoPage" />
     <div v-else class="x-two-col">
       <aside class="x-side-col">
         <DocNavCard v-if="kind() === 'doc'" />
-        <TocCard v-if="kind() === 'post'" />
-        <SiteSidebar v-if="kind() !== 'doc'" />
         <ProfileCard v-if="kind() === 'post'" />
+        <TocCard v-if="kind() === 'post'" />
+        <!-- <SiteSidebar v-if="kind() !== 'doc'" /> -->
       </aside>
       <div class="x-main-col">
         <PostView v-if="kind() === 'post'" />
-        <AutoPageView v-else-if="kind() === 'auto'" :type="frontmatter.autoPage" />
         <article v-else class="post-prose" data-layout="page">
           <Content />
         </article>
