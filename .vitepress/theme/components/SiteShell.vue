@@ -79,7 +79,7 @@ if (typeof window !== 'undefined') {
         <hr class="x-footer-divider" />
         <div class="x-footer-inner">
           <span>© {{ new Date().getFullYear() }} {{ site.title }}</span>
-          <span>本博客由 「晓」框架| ShenYuan 强力驱动</span>
+          <span>本博客由 「晓」框架 | ShenYuan 强力驱动</span>
           <span>感谢浏览本博客</span>
         </div>
       </div>
