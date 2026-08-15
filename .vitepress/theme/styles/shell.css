@@ -2,49 +2,11 @@
 
 html {
   scrollbar-width: none;
-  -ms-overflow-style: none;
-  scrollbar-gutter: auto;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  display: none;
 }
 
 body {
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-html, body {
-  scrollbar-color: var(--scrollbar-thumb) transparent;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-}
-
-::-webkit-scrollbar-button,
-::-webkit-scrollbar-corner {
-  display: none;
-  width: 0;
-  height: 0;
 }
 
 .x-site {
@@ -92,6 +54,7 @@ html, body {
   width: min(1200px, calc(100vw - 32px));
   transform: translateX(-50%);
   z-index: 50;
+  
 }
 
 @media (max-width: 640px) {
@@ -110,8 +73,19 @@ html, body {
   height: 72px;
   padding-inline: var(--space-4);
   background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: none;
+
   border-radius: 0 0 var(--radius-large) var(--radius-large);
-  transition: box-shadow 0.2s ease, background 0.3s ease;
+  transition: box-shadow 0.2s ease, background 0.3s ease, border-color 0.2s ease;
+
+  backdrop-filter: blur(16px);           /* 磨砂模糊 */
+  -webkit-backdrop-filter: blur(16px);   /* Safari 兼容 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);  /* 轻微阴影 */
+}
+
+html.dark .x-header-inner {
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .x-header-scrolled {

@@ -71,7 +71,7 @@ export default defineConfig({
   srcDir: 'docs',
   scrollOffset: 72,
   srcExclude: srcExcludes,
-  base: '/',
+  base: '',
   markdown: {
     headers: true,
     theme: { light: 'github-light', dark: 'github-dark' },
@@ -80,7 +80,7 @@ export default defineConfig({
   rewrites: postRewrites,
   themeConfig: { hasDevDocs } as never,
   head: [
-    ['link', { rel: 'icon', href: `${site.url}/favicon.svg` }],
+    ['link', { rel: 'icon', href: `https://avatars.githubusercontent.com/u/149544542` }],
   ],
   transformPageData(pageData, ctx) {
     const fm = pageData.frontmatter as Record<string, unknown>;
