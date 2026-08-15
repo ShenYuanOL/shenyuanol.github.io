@@ -10,7 +10,7 @@ tags:
   - laravel
 category: Laravel
 layout: essay
-updated: '2026-08-15 16:46:08'
+updated: '2026-08-15 17:00:19'
 ---
 
 # 前言
@@ -128,8 +128,7 @@ http {
         }
     }
 }
-```
-
+```html
 <div style="text-align: center;">
   <span style="border-top: 1px solid #000; padding: 0 10px; background-color: white;">
     ——起始——

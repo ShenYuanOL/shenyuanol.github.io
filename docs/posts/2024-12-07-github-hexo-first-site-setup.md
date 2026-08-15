@@ -6,7 +6,7 @@ description: "终于是吃上Github的个人博客建站了，之前使用的宝
 tags:
   - 未分类
 layout: essay
-updated: '2026-08-15 16:46:08'
+updated: '2026-08-15 17:00:19'
 ---
 
 > 终于是吃上Github的个人博客建站了，之前使用的宝塔-wordpress建站，由于租赁的服务器自动更新导致的宝塔服务崩溃的问题，把服务器站点关了，不仅个人博客关了，自己的项目也停了（当然主要问题不是博客关了🥵）
@@ -35,7 +35,7 @@ npm包可以全局安装和局部安装，为了方便使用hexo命令，建议�
 
 桌面win+R运行cmd安装hexo基本环境
 
-```
+```bash
 npm install hexo -g
 ```
 
@@ -45,7 +45,7 @@ npm install hexo -g
 
 然后在终端中输入以下指令进行hexo项目初始化
 
-```
+```bash
 npm init
 ```
 
