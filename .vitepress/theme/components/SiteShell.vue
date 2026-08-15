@@ -58,7 +58,6 @@ if (typeof window !== 'undefined') {
           <a :href="withBase('/archives')">归档</a>
           <a :href="withBase('/tags')">标签</a>
           <a :href="withBase('/categories')">分类</a>
-          <a v-if="hasDevDocs" :href="withBase('/dev')">文档</a>
           <a :href="withBase('/about')">关于</a>
           <button class="x-theme-toggle" type="button" aria-label="切换主题" @click="toggleTheme">
             <Icon icon="mdi:white-balance-sunny" class="x-icon-sun" />

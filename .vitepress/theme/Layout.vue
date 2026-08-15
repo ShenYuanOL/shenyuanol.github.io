@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
-import { Content } from 'vitepress'
-import SiteShell from './components/SiteShell.vue'
-import SiteSidebar from './components/SiteSidebar.vue'
-import TocCard from './components/TocCard.vue'
-import DocNavCard from './components/DocNavCard.vue'
-import PostView from './views/PostView.vue'
-import AutoPageView from './views/AutoPageView.vue'
-import NotFoundView from './views/NotFoundView.vue'
+import { useData } from 'vitepress';
+import { Content } from 'vitepress';
+import SiteShell from './components/SiteShell.vue';
+import SiteSidebar from './components/SiteSidebar.vue';
+import TocCard from './components/TocCard.vue';
+import DocNavCard from './components/DocNavCard.vue';
+import PostView from './views/PostView.vue';
+import AutoPageView from './views/AutoPageView.vue';
+import NotFoundView from './views/NotFoundView.vue';
 
-const { page, frontmatter } = useData()
+const { page, frontmatter } = useData();
 
 function kind(): 'md' | 'post' | 'auto' | 'home' | 'doc' | 'not-found' {
-  const rel = page.value.relativePath
-  if (rel === '404.md') return 'not-found'
-  if (frontmatter.value.home === true) return 'home'
-  if (rel.startsWith('dev/')) return 'doc'
-  if (typeof frontmatter.value.autoPage === 'string') return 'auto'
-  if (typeof frontmatter.value.slug === 'string' && frontmatter.value.slug) return 'post'
-  return 'md'
+  const rel = page.value.relativePath;
+  if (rel === '404.md') return 'not-found';
+  if (frontmatter.value.home === true) return 'home';
+  if (rel.startsWith('dev/')) return 'doc';
+  if (typeof frontmatter.value.autoPage === 'string') return 'auto';
+  if (typeof frontmatter.value.slug === 'string' && frontmatter.value.slug) return 'post';
+  return 'md';
 }
 </script>
 
@@ -33,6 +33,7 @@ function kind(): 'md' | 'post' | 'auto' | 'home' | 'doc' | 'not-found' {
         <DocNavCard v-if="kind() === 'doc'" />
         <TocCard v-if="kind() === 'post'" />
         <SiteSidebar v-if="kind() !== 'doc'" />
+        <ProfileCard v-if="kind() === 'post'" />
       </aside>
       <div class="x-main-col">
         <PostView v-if="kind() === 'post'" />

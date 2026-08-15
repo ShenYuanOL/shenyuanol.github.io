@@ -7,7 +7,7 @@ defineProps<{ limit?: number; }>();
 
 <template>
   <div class="x-post-list">
-    <PostCard v-for="post in (limit ? posts.slice(0, limit) : posts)" :key="post.slug" :post="post" />
+    <PostCard v-for="post in (limit ? posts.slice(0, limit) : posts.slice(0, 5))" :key="post.slug" :post="post" />
   </div>
 </template>
 

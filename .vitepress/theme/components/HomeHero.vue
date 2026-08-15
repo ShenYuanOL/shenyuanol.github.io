@@ -27,13 +27,5 @@ const hasDevDocs = computed(() => theme.value?.hasDevDocs === true);
         <Icon :icon="s.mdi" />
       </a>
     </div>
-    <div class="x-home-hero-actions">
-      <a class="x-hero-btn x-hero-btn-primary" :href="withBase('/archives')">
-        <Icon icon="mdi:clock-outline" />全部文章
-      </a>
-      <a v-if="hasDevDocs" class="x-hero-btn x-hero-btn-ghost" :href="withBase('/dev')">
-        <Icon icon="mdi:book-open-page-variant" />开发文档
-      </a>
-    </div>
   </section>
 </template>
