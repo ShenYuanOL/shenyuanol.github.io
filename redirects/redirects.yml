@@ -1,0 +1,39 @@
+# 「晓」URL 迁移唯一事实来源
+# from: 旧路径（不含域名）；to: 目标路径或完整 URL；status: 301 / 302 / 410
+# 运行 pnpm gen:redirects 生成 _redirects（GitHub Pages / Netlify）与 nginx 规则
+# 新站上线时不需要任何重定向；仅当 slug 变更时在此登记，禁止改旧文章 URL 而不登记
+
+redirects:
+  - from: /posts/2025-10-26-how-to-use-mstsc-in-your-winpc
+    to: /posts/how-to-use-mstsc-in-your-winpc
+    status: 301
+  - from: /posts/2025-10-23-newblog
+    to: /posts/newblog
+    status: 301
+  - from: /posts/2025-01-19-vue-game-notes
+    to: /posts/vue-game-notes
+    status: 301
+  - from: /posts/2025-01-01-php-laravel-windows-deployment
+    to: /posts/php-laravel-windows-deployment
+    status: 301
+  - from: /posts/2024-12-31-mc-web-frontend-ui-design
+    to: /posts/mc-web-frontend-ui-design
+    status: 301
+  - from: /posts/2024-12-31-mc-web-integration-system-project
+    to: /posts/mc-web-integration-system-project
+    status: 301
+  - from: /posts/2024-12-21-wallpaper-engine-web-tutorial
+    to: /posts/wallpaper-engine-web-tutorial
+    status: 301
+  - from: /posts/2024-12-10-secure-keyboard-inspiration
+    to: /posts/secure-keyboard-inspiration
+    status: 301
+  - from: /posts/2024-12-08-github-hexo-vue-spa-theme-issues
+    to: /posts/github-hexo-vue-spa-theme-issues
+    status: 301
+  - from: /posts/2024-12-07-html-css-notes
+    to: /posts/html-css-notes
+    status: 301
+  - from: /posts/2024-12-07-github-hexo-first-site-setup
+    to: /posts/github-hexo-first-site-setup
+    status: 301

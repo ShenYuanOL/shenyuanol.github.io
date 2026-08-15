@@ -1,0 +1,19 @@
+---
+title: ShenYuan|深远
+description: ShenYuan博客站，深远博客站
+home: true
+---
+
+<HomeHero />
+
+<div class="x-home-grid">
+  <aside class="x-home-aside">
+    <CategoryWidget />
+    <TagWidget />
+  </aside>
+  <main class="x-home-main">
+    <div class="x-home-section-head">最新文章</div>
+    <PostList />
+    <a class="x-home-more" href="/archives">查看全部文章 →</a>
+  </main>
+</div>
