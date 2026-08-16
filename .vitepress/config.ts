@@ -143,7 +143,14 @@ export default defineConfig({
     publicDir: resolve(process.cwd(), 'public'),
     server: {
       host: true,
-      strictPort: false,
+      port: 5173,
+      strictPort: true,
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        Pragma: 'no-cache',
+        Expires: '0',
+        'Surrogate-Control': 'no-store',
+      },
     },
     plugins: [
       {
@@ -166,7 +173,9 @@ export default defineConfig({
             if (rule) {
               res.statusCode = rule.status;
               res.setHeader('Location', `${base.replace(/\/$/, '')}${rule.to}`);
-              res.setHeader('Cache-Control', 'no-store');
+              res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+              res.setHeader('Pragma', 'no-cache');
+              res.setHeader('Expires', '0');
               res.end();
               return;
             }

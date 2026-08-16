@@ -1,6 +1,6 @@
 ---
 title: ShenYuan|深远
-description: ShenYuan博客站，深远博客站
+description: ShenYuan | 深远 的博客，希望在这我的碎碎念能对你我有所帮助，感谢每一位阅读我文章的读者，愿上天不辜负每一位渴望知识渴望真情的人
 home: true
 ---
 
