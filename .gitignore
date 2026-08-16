@@ -10,6 +10,6 @@ docs/.vitepress/
 public/_redirects
 redirects/redirects.nginx.conf
 
-# 框架更新备份与状态
+# 框架更新备份
 .xiao-backup/
 .xiao/

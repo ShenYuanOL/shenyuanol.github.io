@@ -136,6 +136,14 @@ async function main() {
 
     if (kind === 'theme') {
       const remoteHash = hash(remote)
+      if (!current) {
+        // 框架新增文件（用户无此文件）→ 直接创建
+        state.files[rel] = remoteHash
+        mkdirSync(dirname(dest), { recursive: true })
+        writeFileSync(dest, remote)
+        updated.push(rel)
+        return
+      }
       if (isFirstRun) {
         // 首次运行：记录框架基线（源内容 hash），不覆盖，保护用户现有样式
         state.files[rel] = remoteHash
@@ -148,7 +156,7 @@ async function main() {
         skipped.push(rel)
         return
       }
-      // 未改（与基线一致）或框架新增文件 → 更新，并更新基线
+      // 未改（与基线一致）→ 更新，并更新基线
       state.files[rel] = remoteHash
     }
 
