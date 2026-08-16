@@ -7,7 +7,7 @@ tags:
   - 随笔 碎碎念
 category: 个人生活
 layout: essay
-updated: '2026-08-16 22:39:36'
+updated: '2026-08-16 23:20:33'
 ---
 
 # AI大模型与程序员自我
